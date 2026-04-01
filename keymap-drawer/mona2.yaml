@@ -16,7 +16,7 @@ layers:
   - D
   - F
   - G
-  - F13
+  - A
   - H
   - J
   - K
@@ -27,8 +27,8 @@ layers:
   - C
   - V
   - B
-  - F14
-  - F15
+  - A
+  - A
   - N
   - M
   - ','
@@ -36,7 +36,7 @@ layers:
   - /
   - LCTRL
   - LEFT WIN
-  - F16
+  - A
   - BACKSPACE
   - {t: ENTER, h: '2'}
   - {t: '&to_layer_0 LANG2', h: '3'}
