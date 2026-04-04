@@ -147,7 +147,7 @@
         layer_7 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                    &trans             &trans  &trans  &kp PAGE_UP    &trans
-&trans  &trans  &trans  &trans  &trans            &trans  &trans             &trans  &trans  &kp PAGE_DOWN  &trans
+&kp A   &trans  &trans  &trans  &trans            &trans  &trans             &trans  &trans  &kp PAGE_DOWN  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans             &trans  &trans  &trans         &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp RIGHT_CONTROL                                 &trans
             >;
