@@ -81,7 +81,7 @@
         default_layer {
             bindings = <
 &kp Q           &kp W         &kp E         &kp R          &kp T                                                          &kp Y        &kp U  &kp I      &kp O    &kp P
-&kp A           &kp S         &kp D         &lt 6 F        &kp G                                  &kp DELETE              &kp H        &kp J  &kp K      &kp L    &kp MINUS
+&kp A           &lt 6 S       &kp D         &kp F          &kp G                                  &kp DELETE              &kp H        &kp J  &kp K      &kp L    &kp MINUS
 &kp LEFT_SHIFT  &kp Z         &kp X         &kp C          &kp V        &trans                    &kp B                   &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
 &kp LCTRL       &kp LEFT_WIN  &kp LEFT_ALT  &kp BACKSPACE  &lt 2 SPACE  &lt_to_layer_0 4 LANG2    &lt_to_layer_0 1 LANG1  &lt 3 ENTER                             &kp RIGHT_CONTROL
             >;
@@ -105,7 +105,7 @@
 &kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp POUND       &kp DOLLAR       &kp PERCENT                    &kp AMPERSAND  &kp SINGLE_QUOTE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AT_SIGN
 &trans           &trans             &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans                 &trans  &trans         &kp TILDE         &kp PIPE              &kp PLUS               &kp ASTERISK
 &trans           &trans             &trans          &trans           &trans       &trans    &trans  &trans         &trans            &kp LESS_THAN         &kp GREATER_THAN       &kp QUESTION
-&trans           &trans             &trans          &trans           &trans       &trans    &trans  &trans                                                                        &kp UNDERSCORE
+&trans           &trans             &trans          &trans           &trans       &trans    &trans  &kp ENTER                                                                     &kp UNDERSCORE
             >;
 
             sensor-bindings = <&scroll_right_left>;
