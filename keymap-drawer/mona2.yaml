@@ -269,7 +269,7 @@ layers:
   - {t: ▽, type: trans}
   - PAGE UP
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - A
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
