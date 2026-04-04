@@ -12,9 +12,9 @@ layers:
   - O
   - P
   - A
-  - S
+  - {t: S, h: '7'}
   - D
-  - {t: F, h: '7'}
+  - F
   - G
   - DELETE
   - H
@@ -127,7 +127,7 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ENTER
   - _
   '3':
   - {t: ▽, type: trans}
@@ -270,9 +270,9 @@ layers:
   - PAGE UP
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
