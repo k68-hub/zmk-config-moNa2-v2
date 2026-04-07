@@ -23,16 +23,6 @@
     combos {
         compatible = "zmk,combos";
 
-        layer4_ESC {
-            bindings = <&lt 4 ESC>;
-            key-positions = <39 38>;
-        };
-
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <11 12>;
-        };
-
         Alt+Tab {
             bindings = <&kp LA(TAB)>;
             key-positions = <35 0>;
