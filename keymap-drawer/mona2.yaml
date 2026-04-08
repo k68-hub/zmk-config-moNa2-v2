@@ -12,16 +12,16 @@ layers:
   - O
   - P
   - A
-  - {t: S, h: '7'}
+  - S
   - D
   - F
   - G
-  - DELETE
+  - {t: ▽, type: trans}
   - H
   - J
   - K
   - L
-  - '-'
+  - {t: '-', h: LAYER_5}
   - LEFT SHIFT
   - Z
   - X
@@ -37,11 +37,11 @@ layers:
   - LCTRL
   - LEFT WIN
   - LEFT ALT
-  - BACKSPACE
-  - {t: SPACE, h: Shift}
-  - {t: '&to_layer_0 LANG2', h: '4'}
-  - {t: '&to_layer_0 LANG1', h: '1'}
-  - {t: ENTER, h: '3'}
+  - {t: BACKSPACE, h: '4'}
+  - {t: SPACE, h: '1'}
+  - {t: '&to_layer_0 DELETE', h: Shift}
+  - {t: '&to_layer_0 LANG1', h: '3'}
+  - ENTER
   - RIGHT CONTROL
   '1':
   - '1'
@@ -59,12 +59,12 @@ layers:
   - '['
   - ']'
   - {t: ▽, type: trans}
-  - DELETE
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ^
-  - \
   - ;
   - ':'
+  - '='
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -75,15 +75,15 @@ layers:
   - {t: ▽, type: trans}
   - +
   - '-'
-  - '='
+  - .
   - /
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - BACKSPACE
-  - SPACE
   - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - \
   Shift:
@@ -105,8 +105,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '~'
-  - '|'
   - +
+  - {t: ▽, type: trans}
   - '*'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -124,33 +124,33 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ENTER
   - _
   '3':
+  - TAB
+  - ESCAPE
+  - PAUSE BREAK
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - UP ARROW
   - INSERT
   - HOME
+  - UP ARROW
+  - END
+  - PAGE UP
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - DELETE
+  - LANGUAGE 2
   - {t: ▽, type: trans}
   - LEFT ARROW
   - DOWN ARROW
   - RIGHT ARROW
-  - END
+  - PAGE DOWN
   - LEFT SHIFT
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -165,12 +165,12 @@ layers:
   - {t: ▽, type: trans}
   - LEFT CONTROL
   - LEFT WIN
-  - {t: ▽, type: trans}
+  - LEFT ALT
   - BACKSPACE
   - SPACE
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - DELETE
   - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   '4':
   - F1
@@ -208,13 +208,13 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - LEFT ALT
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - RIGHT ALT
   LAYER_5:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -232,44 +232,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&mkp MB5'
   - '&mkp MB1'
   - '&mkp MB3'
   - '&mkp MB2'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  '7':
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - PAGE UP
-  - {t: ▽, type: trans}
-  - A
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -278,7 +244,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - PAGE DOWN
+  - '&mkp MB4'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -291,15 +257,6 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - RIGHT CONTROL
   - {t: ▽, type: trans}
   '6':
   - {t: ▽, type: trans}
