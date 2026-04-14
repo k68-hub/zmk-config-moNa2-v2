@@ -88,7 +88,7 @@
     //right hand trackball
     trackball_central_listener: trackball_central_listener {
         compatible = "zmk,input-listener";
-        device = <&trackball>;
+        device = <&pmw3610>;
         status = "okay";
         input-processors = 
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>         //Y軸反転
