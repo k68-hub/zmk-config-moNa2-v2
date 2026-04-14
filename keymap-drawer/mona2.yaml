@@ -16,7 +16,7 @@ layers:
   - D
   - F
   - G
-  - {t: ▽, type: trans}
+  - LANGUAGE 2
   - H
   - J
   - K
@@ -27,7 +27,7 @@ layers:
   - X
   - C
   - V
-  - {t: ▽, type: trans}
+  - B
   - B
   - N
   - M
@@ -145,7 +145,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - LANGUAGE 2
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - LEFT ARROW
   - DOWN ARROW
@@ -304,3 +304,5 @@ layers:
 combos:
 - p: [35, 0]
   k: Alt+TAB
+- p: [17, 18, 19, 28, 16]
+  k: A
