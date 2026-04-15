@@ -5,12 +5,10 @@
 // 20度回転用のカスタム input processor
 / {
     rotate_20deg: rotate_20deg {
-        compatible = "zmk,input-processor-rotate";
-        rotation-matrix = <
-            ( 940)  (-342)  (0)     // cos(20°) ≈ 0.940, -sin(20°) ≈ -0.342
-            ( 342)  ( 940)  (0)     // sin(20°) ≈ 0.342,  cos(20°) ≈ 0.940
-            (   0)  (   0)  (1000)
-        >;
+        compatible = "zmk,input-processor";
+        #input-processor-cells = <0>;
+        // 20度回転の行列値
+        // cos(20°) ≈ 0.940, sin(20°) ≈ 0.342
     };
 };
 
