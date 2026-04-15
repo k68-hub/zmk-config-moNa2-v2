@@ -63,6 +63,18 @@
 };
 
 
+// 20度回転用のカスタム input processor
+/ {
+    rotate_20deg: rotate_20deg {
+        compatible = "zmk,input-processor-rotate";
+        rotation-matrix = <
+            ( 940)  (-342)  (0)     // cos(20°) ≈ 0.940, -sin(20°) ≈ -0.342
+            ( 342)  ( 940)  (0)     // sin(20°) ≈ 0.342,  cos(20°) ≈ 0.940
+            (   0)  (   0)  (1000)
+        >;
+    };
+};
+
 // Overrides for the input listener node
 &trackball_central_listener {
     status = "okay";
@@ -71,11 +83,12 @@
     scroller {
         layers = <7>;
         input-processors = 
-            // <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,        //X軸とY軸の入れ替え
+            <&rotate_20deg>,                                     //20度右に傾ける
             <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>,       //X軸反転
             <&zip_xy_to_scroll_mapper>,                         //スクロールモードに変更
             <&zip_scroll_transform INPUT_TRANSFORM_X_INVERT>,   //スクロールのX軸反転
             <&zip_scroll_scaler 1 5>;                           //スクロール量を1/4倍
     };
 
+};
 };
