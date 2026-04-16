@@ -38,3 +38,10 @@ config RGBLED_WIDGET_BATTERY_LEVEL_CRITICAL
     default 10
 
 endif
+
+if SHIELD_MONA2_R
+
+config ZMK_KEYBOARD_NAME
+    default "moNa2"
+
+endif
