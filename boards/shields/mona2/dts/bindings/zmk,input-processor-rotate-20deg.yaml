@@ -1,0 +1,9 @@
+description: ZMK 20 degree rotation input processor
+
+compatible: "zmk,input-processor-rotate-20deg"
+
+properties:
+  "#input-processor-cells":
+    type: int
+    required: true
+    const: 0
