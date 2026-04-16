@@ -1,7 +1,5 @@
-#include <kernel.h>
-#include <zmk/input/input.h>
-#include <zmk/input/input_processor.h>
-#include <math.h>
+#include <zephyr/kernel.h>
+#include <zephyr/input/input.h>
 
 #define DT_DRV_COMPAT zmk_input_processor_rotate_20
 
@@ -9,26 +7,30 @@
 #define COS_20_DEG 940   // cos(20°) * 1000
 #define SIN_20_DEG 342   // sin(20°) * 1000
 
-struct rotate_20_config {
-    int dummy;
-};
-
 struct rotate_20_data {
     int last_x;
     int last_y;
-    bool x_updated;
+    bool has_x;
+    bool has_y;
+};
+
+static struct rotate_20_data processor_data = {
+    .last_x = 0,
+    .last_y = 0,
+    .has_x = false,
+    .has_y = false,
 };
 
 static int rotate_20_process(const struct device *dev, struct input_event *evt) {
-    struct rotate_20_data *data = dev->data;
+    struct rotate_20_data *data = &processor_data;
     
     if (evt->code == INPUT_REL_X) {
         data->last_x = evt->value;
-        data->x_updated = true;
+        data->has_x = true;
         return 0;
     }
     
-    if (evt->code == INPUT_REL_Y && data->x_updated) {
+    if (evt->code == INPUT_REL_Y && data->has_x) {
         data->last_y = evt->value;
         
         // 回転行列を適用
@@ -36,10 +38,7 @@ static int rotate_20_process(const struct device *dev, struct input_event *evt) 
         int rotated_y = (data->last_x * SIN_20_DEG + data->last_y * COS_20_DEG) / 1000;
         
         evt->value = rotated_y;
-        data->x_updated = false;
-        
-        // X値も更新する必要がある場合の処理
-        // （ここでは Y のみ処理）
+        data->has_x = false;
     }
     
     return 0;
@@ -53,10 +52,7 @@ static const struct input_processor_driver_api api = {
     .process = rotate_20_process,
 };
 
-static struct rotate_20_data rotate_20_data;
-static const struct rotate_20_config rotate_20_config;
-
 DEVICE_DT_INST_DEFINE(0, rotate_20_init, NULL,
-                      &rotate_20_data, &rotate_20_config,
-                      POST_KERNEL, CONFIG_INPUT_PROCESSOR_INIT_PRIORITY,
+                      &processor_data, NULL,
+                      POST_KERNEL, 99,
                       &api);
