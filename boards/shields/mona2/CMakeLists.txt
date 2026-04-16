@@ -1,1 +1,2 @@
 zephyr_library()
+zephyr_library_sources(input_processor_rotate_20.c)
