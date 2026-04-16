@@ -67,7 +67,7 @@
     scroller {
         layers = <7>;
         input-processors = 
-            <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,        //90度回転
+            <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,         //90度回転
             <&zip_xy_to_scroll_mapper>,
             <&zip_scroll_transform INPUT_TRANSFORM_X_INVERT>,
             <&zip_scroll_scaler 1 5>;
