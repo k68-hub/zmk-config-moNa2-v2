@@ -4,9 +4,9 @@
 
 #define DT_DRV_COMPAT zmk_input_processor_rotate_20
 
-// 20度回転の三角関数値（倍率1000）
-#define COS_20_DEG 940   // cos(20°) * 1000
-#define SIN_20_DEG 342   // sin(20°) * 1000
+// -20度回転の三角関数値（倍率1000）
+#define COS_NEG_20_DEG 940   // cos(-20°) * 1000
+#define SIN_NEG_20_DEG -342   // sin(-20°) * 1000
 
 struct rotate_20_data {
     int last_x;
@@ -27,9 +27,11 @@ static int rotate_20_process(const struct device *dev, struct input_event *evt) 
     if (evt->code == INPUT_REL_Y && data->has_x) {
         data->last_y = evt->value;
         
-        // 回転行列を適用
-        int rotated_x = (data->last_x * COS_20_DEG - data->last_y * SIN_20_DEG) / 1000;
-        int rotated_y = (data->last_x * SIN_20_DEG + data->last_y * COS_20_DEG) / 1000;
+        // 回転行列を適用: -20度回転
+        // [x'] = [cos(-20°) -sin(-20°)] [x]   = [cos(20°)  sin(20°)] [x]
+        // [y']   [sin(-20°)  cos(-20°)] [y]     [-sin(20°) cos(20°)] [y]
+        int rotated_x = (data->last_x * COS_NEG_20_DEG - data->last_y * SIN_NEG_20_DEG) / 1000;
+        int rotated_y = (data->last_x * SIN_NEG_20_DEG + data->last_y * COS_NEG_20_DEG) / 1000;
         
         evt->value = rotated_y;
         data->has_x = false;
