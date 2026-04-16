@@ -3,3 +3,11 @@ config SHIELD_MONA2_R
 
 config SHIELD_MONA2_L
     def_bool $(shields_list_contains,mona2_l)
+
+if SHIELD_MONA2_R || SHIELD_MONA2_L
+
+config INPUT_PROCESSOR_ROTATE_20
+    bool "ZMK 20-degree rotation input processor"
+    default y if ZMK_POINTING
+
+endif
