@@ -2,6 +2,13 @@
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 
+/ {
+    rotate_20: rotate_20 {
+        compatible = "zmk,input-processor-rotate-20";
+        #input-processor-cells = <0>;
+    };
+};
+
 &default_transform {
     col-offset = <6>;
 };
@@ -67,7 +74,8 @@
     scroller {
         layers = <7>;
         input-processors = 
-            <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,         //90度回転
+            <&rotate_20>,                                        //20度回転
+            <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>,       //X軸反転
             <&zip_xy_to_scroll_mapper>,
             <&zip_scroll_transform INPUT_TRANSFORM_X_INVERT>,
             <&zip_scroll_scaler 1 5>;
