@@ -1,5 +1,6 @@
 #include <zephyr/kernel.h>
 #include <zephyr/input/input.h>
+#include <zephyr/device.h>
 
 #define DT_DRV_COMPAT zmk_input_processor_rotate_20
 
@@ -14,15 +15,8 @@ struct rotate_20_data {
     bool has_y;
 };
 
-static struct rotate_20_data processor_data = {
-    .last_x = 0,
-    .last_y = 0,
-    .has_x = false,
-    .has_y = false,
-};
-
 static int rotate_20_process(const struct device *dev, struct input_event *evt) {
-    struct rotate_20_data *data = &processor_data;
+    struct rotate_20_data *data = dev->data;
     
     if (evt->code == INPUT_REL_X) {
         data->last_x = evt->value;
@@ -48,11 +42,10 @@ static int rotate_20_init(const struct device *dev) {
     return 0;
 }
 
-static const struct input_processor_driver_api api = {
-    .process = rotate_20_process,
-};
+#define ROTATE_20_INIT(n) \
+    static struct rotate_20_data rotate_20_data_##n = {0}; \
+    DEVICE_DT_INST_DEFINE(n, rotate_20_init, NULL, \
+                          &rotate_20_data_##n, NULL, \
+                          POST_KERNEL, 99, NULL);
 
-DEVICE_DT_INST_DEFINE(0, rotate_20_init, NULL,
-                      &processor_data, NULL,
-                      POST_KERNEL, 99,
-                      &api);
+DT_INST_FOREACH_STATUS_OKAY(ROTATE_20_INIT)
