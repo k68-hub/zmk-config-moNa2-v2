@@ -4,7 +4,7 @@
 
 / {
     rotate_20deg: rotate_20deg {
-        compatible = "zmk,input-processor";
+        compatible = "zmk,input-processor-rotate-20deg";
         #input-processor-cells = <0>;
     };
 };
