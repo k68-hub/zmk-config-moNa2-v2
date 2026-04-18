@@ -21,7 +21,7 @@ layers:
   - J
   - K
   - L
-  - {t: '-', h: LAYER_5}
+  - {t: '-', h: Mause}
   - LEFT SHIFT
   - Z
   - X
@@ -37,13 +37,13 @@ layers:
   - LCTRL
   - LEFT WIN
   - LEFT ALT
-  - {t: BACKSPACE, h: '4'}
-  - {t: SPACE, h: '1'}
-  - {t: '&to_layer_0 DELETE', h: Shift}
-  - {t: '&to_layer_0 LANG1', h: '3'}
+  - {t: BACKSPACE, h: Function}
+  - {t: SPACE, h: Shift}
+  - {t: '&to_layer_0 DELETE', h: OutKey}
+  - {t: '&to_layer_0 LANG1', h: Position}
   - ENTER
   - RIGHT CONTROL
-  '1':
+  OutKey:
   - '1'
   - '2'
   - '3'
@@ -81,8 +81,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
   - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - \
@@ -124,55 +124,12 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - _
-  '3':
-  - TAB
-  - ESCAPE
-  - PAUSE BREAK
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - INSERT
-  - HOME
-  - UP ARROW
-  - END
-  - PAGE UP
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - LEFT ARROW
-  - DOWN ARROW
-  - RIGHT ARROW
-  - PAGE DOWN
-  - LEFT SHIFT
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - LEFT CONTROL
-  - LEFT WIN
-  - LEFT ALT
-  - BACKSPACE
-  - SPACE
-  - DELETE
-  - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  '4':
+  Function:
   - F1
   - F2
   - F3
@@ -215,7 +172,50 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - RIGHT ALT
-  LAYER_5:
+  Position:
+  - TAB
+  - ESCAPE
+  - PAUSE BREAK
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - INSERT
+  - HOME
+  - UP ARROW
+  - END
+  - PAGE UP
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - LEFT ARROW
+  - DOWN ARROW
+  - RIGHT ARROW
+  - PAGE DOWN
+  - LEFT SHIFT
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - LEFT CONTROL
+  - LEFT WIN
+  - LEFT ALT
+  - BACKSPACE
+  - SPACE
+  - DELETE
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  Mause:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
