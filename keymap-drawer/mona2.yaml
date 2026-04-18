@@ -88,26 +88,26 @@ layers:
   - A
   Shift:
   - '!'
-  - '"'
+  - )
   - '#'
   - $
   - '%'
+  - ^
   - '&'
-  - ''''
-  - (
-  - )
-  - '@'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '{'
-  - '}'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '~'
-  - +
-  - {t: ▽, type: trans}
   - '*'
+  - (
+  - '['
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '}'
+  - '`'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - +
+  - ':'
+  - {t: ▽, type: trans}
+  - '"'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -128,7 +128,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - _
+  - A
   Function:
   - F1
   - F2
