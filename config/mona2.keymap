@@ -2,6 +2,7 @@
 #include <dt-bindings/zmk/input_transform.h>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
@@ -20,14 +21,7 @@
 };
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        asad {
-            bindings = <&kp A>;
-            key-positions = <7 18>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     macros {
         to_layer_0: to_layer_0 {
@@ -93,7 +87,7 @@
 
         Default {
             bindings = <
-&kp Q           &kp W         &kp E         &kp R            &kp T                                                           &kp Y      &kp U  &kp I      &kp O    &kp P
+&kp Q           &kp W         &kp E         &kp R            &kp T                                                           &kp Y      &kp U  &kp I      &kp O    &lt 8 P
 &kp A           &kp S         &kp D         &kp F            &kp G                                   &kp LANGUAGE_2          &kp H      &kp J  &kp K      &kp L    &lt 5 MINUS
 &kp LEFT_SHIFT  &kp Z         &kp X         &kp C            &kp V        &kp B                      &kp B                   &kp N      &kp M  &kp COMMA  &kp DOT  &kp SLASH
 &kp LCTRL       &kp LEFT_WIN  &kp LEFT_ALT  &lt 3 BACKSPACE  &lt 2 SPACE  &lt_to_layer_0 1 DELETE    &lt_to_layer_0 4 LANG1  &kp ENTER                             &kp RIGHT_CONTROL
@@ -175,6 +169,15 @@
             >;
 
             sensor-bindings = <&scroll_up_down>;
+        };
+
+        Macro {
+            bindings = <
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_CLR_ALL  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans        &trans        &trans          &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans        &trans        &trans          &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&sk LCTRL     &trans        &trans          &trans  &trans  &trans    &pw34   &trans                          &trans
+            >;
         };
     };
 };
