@@ -9,6 +9,30 @@
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
 #define MOUSE 5
 #define SCROLL 6
+#define JP_DQUOTE       AT                // "
+#define JP_AMPERSAND    CARET             // &
+#define JP_QUOTE        AMPERSAND         // '
+#define JP_EQUAL        UNDER             // =
+#define JP_CARET        EQUAL             // ^
+#define JP_YEN          0x89              // ¥
+#define JP_PLUS         COLON             // +
+#define JP_TILDE        PLUS              // ~
+#define JP_PIPE         LS(0x89)          // |
+#define JP_AT           LEFT_BRACKET      // @
+#define JP_COLON        SINGLE_QUOTE      // :
+#define JP_ASTERISK     DOUBLE_QUOTES     // *
+#define JP_BACKQUOTE    LEFT_BRACE        // `
+#define JP_UNDERSCORE   LS(0x87)          // _
+#define JP_LBRACKET     RIGHT_BRACKET     // [
+#define JP_RBRACKET     BACKSLASH         // ]
+#define JP_LPAREN       ASTERISK          // (
+#define JP_RPAREN       LEFT_PARENTHESIS  // )
+#define JP_LBRACE       RIGHT_BRACE       // {
+#define JP_RBRACE       PIPE              // }
+#define JP_KANA         LANGUAGE_1        // かな
+#define JP_EISU         LANGUAGE_2        // 英数
+#define JP_HANZEN       GRAVE             // 半角/全角
+#define JP_BSLH  INT1         // (backslash)
 
 &mt {
     flavor = "balanced";
@@ -101,7 +125,7 @@
 &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3       &kp NUMBER_4   &kp NUMBER_5                    &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8   &kp NUMBER_9      &kp NUMBER_0
 &trans        &trans        &kp RIGHT_BRACKET  &kp BACKSLASH  &trans                  &trans  &trans        &kp EQUAL     &kp SEMICOLON  &kp SINGLE_QUOTE  &kp UNDERSCORE
 &trans        &trans        &trans             &trans         &trans        &trans    &trans  &trans        &kp COLON     &kp MINUS      &kp PERIOD        &kp SLASH
-&trans        &trans        &trans             &trans         &trans        &trans    &trans  &trans                                                       &kp LS(BACKSLASH)
+&trans        &trans        &trans             &trans         &trans        &trans    &trans  &trans                                                       &kp JP_YEN
             >;
 
             sensor-bindings = <&scroll_right_left>;
@@ -112,7 +136,7 @@
 &kp EXCLAMATION  &kp RIGHT_PARENTHESIS  &kp POUND        &kp DOLLAR  &kp PERCENT                    &kp CARET  &kp AMPERSAND  &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET
 &trans           &trans                 &kp RIGHT_BRACE  &kp GRAVE   &trans                 &trans  &trans     &kp PLUS       &kp COLON      &trans                &kp DOUBLE_QUOTES
 &trans           &trans                 &trans           &trans      &trans       &trans    &trans  &trans     &trans         &kp LESS_THAN  &kp GREATER_THAN      &kp QUESTION
-&trans           &trans                 &trans           &trans      &trans       &trans    &trans  &trans                                                         &kp LS(MINUS)
+&trans           &trans                 &trans           &trans      &trans       &trans    &trans  &trans                                                         &kp JP_UNDERSCORE
             >;
 
             sensor-bindings = <&scroll_up_down>;
