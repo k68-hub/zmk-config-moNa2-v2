@@ -9,6 +9,22 @@
 #define MOUSE 5
 #define SCROLL 6
 
+/ {
+    input_processors {
+        compatible = "zmk,input-processors";
+
+        scroll_fast: scroll_fast {
+            compatible = "zmk,input-processor-scaler";
+            scale = <5>;
+        };
+
+        scroll_slow: scroll_slow {
+            compatible = "zmk,input-processor-scaler";
+            scale = <1>;
+        };
+    };
+};
+
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
@@ -17,18 +33,6 @@
 &lt {
     quick-tap-ms = <150>;
     flavor = "tap-preferred";
-};
-
-&input_processors {
-    scroll_fast: scroll_fast {
-        compatible = "zmk,input-processor-scaler";
-        scale = <5>;
-    };
-
-    scroll_slow: scroll_slow {
-        compatible = "zmk,input-processor-scaler";
-        scale = <1>;
-    };
 };
 
 / {
