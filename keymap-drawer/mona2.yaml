@@ -21,7 +21,7 @@ layers:
   - J
   - K
   - L
-  - '-'
+  - {t: '-', h: LAYER_5}
   - LEFT SHIFT
   - Z
   - X
@@ -223,10 +223,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - '&mkp MB3'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - B
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -234,10 +234,10 @@ layers:
   - {t: ▽, type: trans}
   - '&mkp MB5'
   - '&mkp MB1'
-  - '&mkp MB3'
   - '&mkp MB2'
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
+  - LEFT SHIFT
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -249,7 +249,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - LCTRL
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -302,7 +302,5 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
 combos:
-- p: [35, 0]
+- p: [0, 35]
   k: Alt+TAB
-- p: [17, 18, 19, 28, 16]
-  k: A
