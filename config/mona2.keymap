@@ -9,22 +9,6 @@
 #define MOUSE 5
 #define SCROLL 6
 
-/ {
-    input_processors {
-        compatible = "zmk,input-processors";
-
-        scroll_fast: scroll_fast {
-            compatible = "zmk,input-processor-scaler";
-            scale = <5>;
-        };
-
-        scroll_slow: scroll_slow {
-            compatible = "zmk,input-processor-scaler";
-            scale = <1>;
-        };
-    };
-};
-
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
@@ -73,29 +57,27 @@
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-
             tap-ms = <20>;
         };
 
-        scroll_up_down_fast: scroll_up_down_fast {
+        scroll_slow: scroll_up_down_slow {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-            input-processors = <&scroll_fast>;
+            tap-ms = <80>;   // 遅い
         };
 
-        scroll_up_down_slow: scroll_up_down_slow {
+        scroll_fast: scroll_up_down_fast {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-            input-processors = <&scroll_slow>;
+            tap-ms = <5>;   // 速い
         };
         
         scroll_right_left: mouse_wheel_right_left {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
-
             tap-ms = <20>;
         };
     };
