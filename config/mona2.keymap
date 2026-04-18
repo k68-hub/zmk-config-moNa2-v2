@@ -100,8 +100,8 @@
             bindings = <
 &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3       &kp NUMBER_4   &kp NUMBER_5                    &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8   &kp NUMBER_9      &kp NUMBER_0
 &trans        &trans        &kp RIGHT_BRACKET  &kp BACKSLASH  &trans                  &trans  &trans        &kp EQUAL     &kp SEMICOLON  &kp SINGLE_QUOTE  &kp UNDERSCORE
-&trans        &trans        &trans             &trans         &trans        &trans    &trans  &trans        &kp COLON     &kp MINUS      &kp PERIOD        &kp A
-&trans        &trans        &trans             &trans         &trans        &trans    &trans  &trans                                                       &kp BACKSLASH
+&trans        &trans        &trans             &trans         &trans        &trans    &trans  &trans        &kp COLON     &kp MINUS      &kp PERIOD        &kp SLASH
+&trans        &trans        &trans             &trans         &trans        &trans    &trans  &trans                                                       &kp A
             >;
 
             sensor-bindings = <&scroll_right_left>;
