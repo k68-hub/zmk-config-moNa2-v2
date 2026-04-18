@@ -19,6 +19,18 @@
     flavor = "tap-preferred";
 };
 
+&input_processors {
+    scroll_fast: scroll_fast {
+        compatible = "zmk,input-processor-scaler";
+        scale = <5>;
+    };
+
+    scroll_slow: scroll_slow {
+        compatible = "zmk,input-processor-scaler";
+        scale = <1>;
+    };
+};
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -61,18 +73,20 @@
             tap-ms = <20>;
         };
 
-        scroll_slow: scroll_up_down_slow {
+        scroll_up_down_fast: scroll_up_down_fast {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_DOWN 1>, <&msc SCRL_UP 1>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+            input-processors = <&scroll_fast>;
         };
 
-        scroll_fast: scroll_up_down_fast {
+        scroll_up_down_slow: scroll_up_down_slow {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_DOWN 5>, <&msc SCRL_UP 5>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+            input-processors = <&scroll_slow>;
         };
-
+        
         scroll_right_left: mouse_wheel_right_left {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
