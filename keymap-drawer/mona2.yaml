@@ -85,7 +85,7 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - A
+  - Sft+\
   Shift:
   - '!'
   - )
@@ -128,7 +128,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - A
+  - Sft+-
   Function:
   - F1
   - F2
