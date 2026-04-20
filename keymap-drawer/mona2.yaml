@@ -148,7 +148,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - F10
   - F11
   - F12
   - {t: ▽, type: trans}
