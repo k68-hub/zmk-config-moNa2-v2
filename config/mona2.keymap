@@ -122,10 +122,10 @@
 
         Out {
             bindings = <
-&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3     &kp NUMBER_4     &kp NUMBER_5                    &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8   &kp NUMBER_9      &kp NUMBER_0
-&none         &none        &kp JP_LBRACKET  &kp JP_RBRACKET  &none                  &none  &none        &kp EQUAL     &kp SEMICOLON  &kp SINGLE_QUOTE  &kp UNDERSCORE
-&none        &none        &none           &none           &none        &none    &none  &none        &kp COLON     &kp MINUS      &kp PERIOD        &kp SLASH
-&kp LCTRL     &none        &none           &none           &none        &none    &none  &none                                                       &kp JP_YEN
+&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3     &kp NUMBER_4     &kp NUMBER_5                  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8   &kp NUMBER_9      &kp NUMBER_0
+&none         &none         &kp JP_LBRACKET  &kp JP_RBRACKET  &none                  &none  &none         &kp EQUAL     &kp SEMICOLON  &kp SINGLE_QUOTE  &kp UNDERSCORE
+&none         &none         &none            &none            &none         &none    &none  &none         &kp COLON     &kp MINUS      &kp PERIOD        &kp SLASH
+&kp LCTRL     &none         &none            &none            &none         &none    &none  &none                                                        &kp JP_YEN
             >;
 
             sensor-bindings = <&scroll_right_left>;
@@ -144,10 +144,10 @@
 
         Function {
             bindings = <
-&kp F1  &kp F2  &kp F3        &kp F4  &kp F5                    &kp F6  &kp F7  &kp F8  &kp F9   &kp F10
-&trans  &trans  &trans        &trans  &trans            &trans  &trans  &trans  &trans  &kp F11  &kp F12
-&trans  &trans  &trans        &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans   &trans
-&trans  &trans  &kp LEFT_ALT  &trans  &trans  &trans    &trans  &trans                           &kp RIGHT_ALT
+&kp F1  &kp F2  &kp F3        &kp F4  &kp F5                    &kp F6  &kp F7  &kp F8   &kp F9   &kp F10
+&trans  &trans  &trans        &trans  &trans            &trans  &trans  &trans  &kp F10  &kp F11  &kp F12
+&trans  &trans  &trans        &trans  &trans  &trans    &trans  &trans  &trans  &trans   &trans   &trans
+&trans  &trans  &kp LEFT_ALT  &trans  &trans  &trans    &trans  &trans                            &kp RIGHT_ALT
             >;
 
             sensor-bindings = <&scroll_up_down>;
